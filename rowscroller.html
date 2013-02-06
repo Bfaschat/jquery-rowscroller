@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>jQuery Row Scroller Plugin</title>
+		
+		<style type="text/css">
+		
+		body {font-family: Helvetica, Arial, sans-serif;}
+		
+		.content {
+			width: 600px;
+			margin: 20px auto;
+			}
+			
+		a.back-to-post {
+			display: block;
+			margin: 25px 0 80px;
+			text-decoration: none;
+			}
+			
+			
+		/*SCROLLER CSS
+		***********************************************/	
+		
+		/*SCROLLER NAV*/
+		.scroller-nav {
+			overflow: hidden;
+			border-bottom: 1px solid black;
+			text-align: right;
+			padding: 10px 0;
+			margin-bottom: 25px;
+			}
+			
+			.scroller-nav a {
+				display: block;
+				width: 80px;			
+				margin-right: 10px;	
+				float: left;				
+				background: black;
+				color: white;
+				text-decoration: none; 
+				text-align: center;
+				font-size: 12px;
+				line-height: 25px;
+				border: 1px solid black;
+				}
+			
+			.scroller-nav a.disabled {
+				background-color: white;
+				border: 1px solid #aaa;
+				color: #aaa;
+				}		
+		
+		/* SCROLLER VIEWPORT*/
+		.viewport .scroller-row {
+			margin-bottom: 25px;
+			}
+		
+			.viewport .scroller-item {
+				width: 185px;
+				float: left;
+				background: black;
+				color: white;
+				margin: 0 0 0 14px;
+				text-align: center;
+				line-height: 100px;
+				}
+				
+			.viewport .scroller-row .scroller-item:first-child {margin-left: 0;}		
+					
+		</style>
+			
+	</head>
+	
+	<body>
+		<div class="content">
+			<a class="back-to-post" href="http://www.bigluxdesign.com/blog/blog-article/jquery_row_scroller_plugin">&laquo; Back to the post</a>
+			<div class="scroller-nav">
+				<a href="#" id="scroller-up">Up</a>
+				<a href="#" id="scroller-down">Down</a>
+			</div>
+			
+			<div class="scroller">
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+				<div>Item</div>
+			</div>
+		</div>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>	
+		<script src="jquery.rowscroller.js"></script>	
+		
+		<script>
+		$(function(){
+			$('.scroller').rowscroller({
+				navUp:				'#scroller-up',
+				navDown:			'#scroller-down',
+				visibleRows: 		4,
+				itemsPerRow: 		3,
+				rowsToScroll:		4,
+				navDisabledClass:	'disabled'
+			});
+		});
+		</script>
+	
+	</body>
+</html>
